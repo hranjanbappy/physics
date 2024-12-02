@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time-Dependent Distance Between Falling Tennis Balls</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.8;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2 {
+      text-align: center;
+      color: #007BFF;
+    }
+    h3 {
+      color: #555;
+    }
+    p, li {
+      font-size: 1em;
+      margin-bottom: 10px;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    .math {
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 4px;
+      font-family: monospace;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Time-Dependent Distance Between Falling Tennis Balls</h1>
+    <h2>Derivation</h2>
+    <p>
+      To derive the time-dependent distance between two tennis balls when the second is released with a delay \( t_{\text{delay}} \), we analyze their motion as follows:
+    </p>
+
+    <h3>1. Equations of Motion</h3>
+    <p>For an object in free fall, the distance fallen at time \( t \) is given by:</p>
+    \[
+    y = \frac{1}{2} g t^2,
+    \]
+    where:
+    <ul>
+      <li>\( y \) is the distance fallen,</li>
+      <li>\( g = 9.81 \, \text{m/s}^2 \) is the acceleration due to gravity,</li>
+      <li>\( t \) is the time elapsed since release.</li>
+    </ul>
+
+    <h3>2. Motion of Each Ball</h3>
+    <p><strong>First Ball:</strong> The first ball starts falling at \( t = 0 \). Its position at time \( t \) is:</p>
+    \[
+    y_1(t) = \frac{1}{2} g t^2.
+    \]
+
+    <p><strong>Second Ball:</strong> The second ball starts falling after a delay of \( t_{\text{delay}} \). Its position at time \( t \) is:</p>
+    <ul>
+      <li>If \( t < t_{\text{delay}} \): It hasn’t started falling yet, so:</li>
+      \[
+      y_2(t) = 0.
+      \]
+      <li>If \( t \geq t_{\text{delay}} \): It falls for \( t - t_{\text{delay}} \) seconds, so:</li>
+      \[
+      y_2(t) = \frac{1}{2} g (t - t_{\text{delay}})^2.
+      \]
+    </ul>
+
+    <h3>3. Time-Dependent Distance Between the Balls</h3>
+    <p>The distance between the two balls, \( d(t) \), is:</p>
+    \[
+    d(t) = \lvert y_1(t) - y_2(t) \rvert.
+    \]
+
+    <p>Substitute \( y_1(t) \) and \( y_2(t) \):</p>
+    <strong>Case 1: \( t < t_{\text{delay}} \)</strong>
+    <p>The second ball hasn’t started falling, so:</p>
+    \[
+    d(t) = y_1(t) = \frac{1}{2} g t^2.
+    \]
+
+    <strong>Case 2: \( t \geq t_{\text{delay}} \)</strong>
+    <p>Both balls are falling, so:</p>
+    \[
+    d(t) = \lvert \frac{1}{2} g t^2 - \frac{1}{2} g (t - t_{\text{delay}})^2 \rvert.
+    \]
+
+    <p>Simplify:</p>
+    \[
+    d(t) = \frac{1}{2} g \left[ t^2 - (t - t_{\text{delay}})^2 \right].
+    \]
+
+    <p>Expand \( (t - t_{\text{delay}})^2 \):</p>
+    \[
+    (t - t_{\text{delay}})^2 = t^2 - 2t t_{\text{delay}} + t_{\text{delay}}^2.
+    \]
+
+    <p>Substitute back:</p>
+    \[
+    d(t) = \frac{1}{2} g \left[ t^2 - (t^2 - 2t t_{\text{delay}} + t_{\text{delay}}^2) \right].
+    \]
+
+    <p>Simplify further:</p>
+    \[
+    d(t) = \frac{1}{2} g \left[ 2t t_{\text{delay}} - t_{\text{delay}}^2 \right].
+    \]
+
+    <h3>Final Expression</h3>
+    <p>For \( t \geq t_{\text{delay}} \):</p>
+    \[
+    d(t) = g t_{\text{delay}} t - \frac{1}{2} g t_{\text{delay}}^2.
+    \]
+
+    <h3>Summary</h3>
+    \[
+    d(t) =
+    \begin{cases}
+      \frac{1}{2} g t^2, & \text{if } t < t_{\text{delay}}, \\
+      g t_{\text{delay}} t - \frac{1}{2} g t_{\text{delay}}^2, & \text{if } t \geq t_{\text{delay}}.
+    \end{cases}
+    \]
+  </div>
+</body>
+</html>

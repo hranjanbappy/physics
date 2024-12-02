@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physics Solution</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.8;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2 {
+      text-align: center;
+      color: #007BFF;
+    }
+    .question {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .answer {
+      font-size: 1em;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .math {
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 4px;
+      margin: 10px 0;
+      font-family: monospace;
+      overflow-x: auto;
+    }
+    pre {
+      background: #eef;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    ul {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Physics Solution</h1>
+    <h2>Motion Under Time-Dependent Force</h2>
+    <div class="question">
+      Given:  
+      <ul>
+        <li>Mass: \( m = 2 \, \text{kg} \)</li>
+        <li>Force: \( F_x = b \cdot t \) with \( b = 20 \, \text{N/s} \)</li>
+        <li>Initial position: \( x_0 = 5 \, \text{m} \)</li>
+        <li>Initial velocity: \( v_x(t = 0) = 0 \, \text{m/s} \)</li>
+        <li>Initial time: \( t_0 = 0 \, \text{s} \)</li>
+      </ul>
+    </div>
+    <div class="answer">
+      <h3>1. Acceleration:</h3>
+      Using Newton's second law of motion:
+      \[
+      F_x = m \cdot a_x
+      \]
+      Substitute \( F_x = b \cdot t \):
+      \[
+      a_x = \frac{F_x}{m} = \frac{b \cdot t}{m}
+      \]
+      Substituting \( b = 20 \, \text{N/s}, m = 2 \, \text{kg} \):
+      \[
+      a_x = \frac{20 \cdot t}{2} = 10 \cdot t \, \text{m/s}^2
+      \]
+      At \( t = 2 \, \text{s} \):
+      \[
+      a_x(2) = 10 \cdot 2 = 20 \, \text{m/s}^2
+      \]
+
+      <h3>2. Velocity:</h3>
+      Acceleration is the rate of change of velocity:
+      \[
+      a_x = \frac{d v_x}{d t}
+      \]
+      Integrate to find \( v_x \):
+      \[
+      v_x(t) = \int a_x \, dt = \int (10 \cdot t) \, dt = 5 \cdot t^2 + C
+      \]
+      At \( t = 0, v_x = 0 \), so \( C = 0 \):
+      \[
+      v_x(t) = 5 \cdot t^2
+      \]
+      At \( t = 2 \, \text{s} \):
+      \[
+      v_x(2) = 5 \cdot (2^2) = 5 \cdot 4 = 20 \, \text{m/s}
+      \]
+
+      <h3>3. Distance (Position):</h3>
+      Velocity is the rate of change of position:
+      \[
+      v_x = \frac{dx}{dt}
+      \]
+      Integrate to find \( x(t) \):
+      \[
+      x(t) = \int v_x \, dt = \int (5 \cdot t^2) \, dt = \frac{5}{3} \cdot t^3 + C_1
+      \]
+      At \( t = 0, x = x_0 = 5 \), so \( C_1 = 5 \):
+      \[
+      x(t) = \frac{5}{3} \cdot t^3 + 5
+      \]
+      At \( t = 2 \, \text{s} \):
+      \[
+      x(2) = \frac{5}{3} \cdot (2^3) + 5 = \frac{5}{3} \cdot 8 + 5 = \frac{40}{3} + 5 = \frac{55}{3} \approx 18.33 \, \text{m}
+      \]
+
+      <h3>Final Results:</h3>
+      <ul>
+        <li>Acceleration at \( t = 2 \, \text{s} \): \( a_x = 20 \, \text{m/s}^2 \)</li>
+        <li>Velocity at \( t = 2 \, \text{s} \): \( v_x = 20 \, \text{m/s} \)</li>
+        <li>Distance at \( t = 2 \, \text{s} \): \( x = 18.33 \, \text{m} \)</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

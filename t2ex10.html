@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 10 Solution</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Exercise 10 Solution</h1>
+        <p><strong>Given:</strong></p>
+        <ul>
+            <li>Deceleration: \( a = -6.5 \, \text{m/s}^2 \)</li>
+            <li>Distance covered: \( s = 45 \, \text{m} \)</li>
+            <li>Final velocity: \( v = 0 \, \text{m/s} \) (since the car stops)</li>
+        </ul>
+
+        <p>We need to calculate:</p>
+        <ol>
+            <li>(a) Time taken for braking, \( t \)</li>
+            <li>(b) Initial velocity, \( v_0 \)</li>
+        </ol>
+
+        <h2>Solution:</h2>
+
+        <h3>(a) Time Taken for Braking</h3>
+        <p>We use the equation of motion:</p>
+        \[
+        v = v_0 + at
+        \]
+        <p>Rearranging for \( t \):</p>
+        \[
+        t = \frac{v - v_0}{a}
+        \]
+        <p>Since \( v = 0 \):</p>
+        \[
+        t = \frac{-v_0}{a}
+        \]
+        <p>We first need to find \( v_0 \) using the second equation of motion.</p>
+
+        <h3>(b) Initial Velocity</h3>
+        <p>We use the equation:</p>
+        \[
+        v^2 = v_0^2 + 2as
+        \]
+        <p>Rearranging for \( v_0^2 \):</p>
+        \[
+        v_0^2 = v^2 - 2as
+        \]
+        <p>Substitute \( v = 0 \):</p>
+        \[
+        v_0^2 = -2as
+        \]
+        <p>Substitute \( a = -6.5 \, \text{m/s}^2 \) and \( s = 45 \, \text{m} \):</p>
+        \[
+        v_0^2 = -2(-6.5)(45)
+        \]
+        \[
+        v_0^2 = 585
+        \]
+        <p>Taking the square root:</p>
+        \[
+        v_0 = \sqrt{585} \approx 24.2 \, \text{m/s}
+        \]
+
+        <h3>Time Calculation</h3>
+        <p>Now substitute \( v_0 \) into the equation for \( t \):</p>
+        \[
+        t = \frac{-v_0}{a}
+        \]
+        <p>Substitute \( v_0 = 24.2 \, \text{m/s} \) and \( a = -6.5 \, \text{m/s}^2 \):</p>
+        \[
+        t = \frac{-24.2}{-6.5} \approx 3.72 \, \text{seconds}
+        \]
+
+        <h3>Final Results:</h3>
+        <p><strong>(a)</strong> Time taken for braking: \( t \approx 3.72 \, \text{seconds} \)</p>
+        <p><strong>(b)</strong> Initial velocity: \( v_0 \approx 24.2 \, \text{m/s} \)</p>
+    </div>
+</body>
+</html>

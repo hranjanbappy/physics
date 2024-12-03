@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atwood's Machine Solution</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            color: #0056b3;
+        }
+        .equation {
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Solution to Atwood's Machine Problem</h1>
+    <p><b>Given:</b></p>
+    <ul>
+        <li>Masses: \( M \) and \( M + m \)</li>
+        <li>Frictionless pulley system</li>
+    </ul>
+
+    <h2>(a) Acceleration acting on the weight pieces:</h2>
+    <p>The forces acting on the system are:</p>
+    <ul>
+        <li>Gravitational force on \( M \): \( F_M = Mg \)</li>
+        <li>Gravitational force on \( M + m \): \( F_{M+m} = (M + m)g \)</li>
+    </ul>
+
+    <p>Let the acceleration of the system be \( a \). Using Newton's second law:</p>
+    <div class="equation">
+        For \( M \): \( T - Mg = Ma \)
+    </div>
+    <div class="equation">
+        For \( M + m \): \( (M + m)g - T = (M + m)a \)
+    </div>
+
+    <p>Adding the two equations eliminates \( T \):</p>
+    <div class="equation">
+        \[
+        (M + m)g - Mg = (M + m)a + Ma
+        \]
+    </div>
+
+    <p>Simplify:</p>
+    <div class="equation">
+        \[
+        mg = (2M + m)a
+        \]
+    </div>
+
+    <p>Solve for \( a \):</p>
+    <div class="equation">
+        \[
+        a = \frac{mg}{2M + m}
+        \]
+    </div>
+
+    <h2>(b) Force pulling on the rope (Tension \( T \)):</h2>
+    <p>Using the equation for \( M \):</p>
+    <div class="equation">
+        \[
+        T - Mg = Ma
+        \]
+    </div>
+    <p>Substitute \( a = \frac{mg}{2M + m} \):</p>
+    <div class="equation">
+        \[
+        T = Mg + M\left(\frac{mg}{2M + m}\right)
+        \]
+    </div>
+
+    <p>Simplify:</p>
+    <div class="equation">
+        \[
+        T = Mg \left(1 + \frac{m}{2M + m}\right)
+        \]
+    </div>
+
+    <h2>Final Results:</h2>
+    <ul>
+        <li>Acceleration: 
+        <div class="equation">
+            \[
+            a = \frac{mg}{2M + m}
+            \]
+        </div>
+        </li>
+        <li>Tension: 
+        <div class="equation">
+            \[
+            T = Mg \left(1 + \frac{m}{2M + m}\right)
+            \]
+        </div>
+        </li>
+    </ul>
+</body>
+</html>
